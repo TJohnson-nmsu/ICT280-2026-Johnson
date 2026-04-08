@@ -1,36 +1,40 @@
+Here’s an updated version of your homepage with these improvements:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Torey Johnson - Full Time Nerd</title>
     <style>
-        /* Body with gradient + subtle texture */
+        /* Body with darker green gradient + subtle grass texture */
         body {
-            background: linear-gradient(135deg, #90EE90, #32CD32);
+            background: linear-gradient(135deg, #006400, #228B22);
             font-family: 'Times New Roman', serif;
-            color: #006400;
+            color: #004d00;
             margin: 0;
             padding: 0;
+            background-image: url('images/grass-texture.png'); /* subtle grass pattern */
+            background-size: cover;
         }
 
         /* Main container card */
         .container {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white to show texture */
             padding: 30px;
             margin: 40px auto;
             border-radius: 15px;
             max-width: 950px;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.4);
         }
 
         /* Header */
         h1 {
             color: white;
-            background: linear-gradient(to right, #006400, #228B22);
+            background: linear-gradient(to right, #004d00, #006400);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
             margin-bottom: 30px;
         }
 
@@ -44,9 +48,9 @@
         .main-image {
             display: block;
             margin: 25px auto;
-            border: 5px solid #006400;
+            border: 5px solid #004d00;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
             transition: transform 0.3s;
         }
         .main-image:hover {
@@ -55,22 +59,22 @@
 
         /* Section headers */
         h2 {
-            background: rgba(200,255,200,0.3);
+            background: rgba(180, 230, 80, 0.8); /* darker yellow-green for readability */
             padding: 10px;
             border-radius: 8px;
-            color: #006400;
+            color: #004d00;
         }
 
         hr {
             border: 0;
-            border-top: 2px solid #228B22;
+            border-top: 2px solid #004d00;
             margin: 15px 0;
         }
 
         /* List styling */
         ul {
             padding-left: 25px;
-            color: #006400;
+            color: #004d00;
         }
         li {
             margin-bottom: 8px;
@@ -78,14 +82,14 @@
 
         /* Navigation bar */
         nav {
-            background-color: #228B22;
+            background-color: #004d00;
             padding: 12px;
             text-align: center;
             border-radius: 8px;
             margin-bottom: 25px;
         }
         nav a {
-            color: #F0E68C;
+            color: #e6d200; /* slightly darker yellow */
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
@@ -102,32 +106,32 @@
             font-family: Arial, sans-serif;
         }
         table th, table td {
-            border: 2px solid #006400;
+            border: 2px solid #004d00;
             padding: 12px;
             text-align: center;
         }
         table th {
-            background-color: #228B22;
-            color: #F0E68C;
+            background-color: #004d00;
+            color: #e6d200; /* darker yellow */
         }
         table tr:nth-child(even) td {
-            background-color: #F0FFF0;
+            background-color: #f0f8e0; /* slightly darker light green */
         }
         table tr:nth-child(odd) td {
-            background-color: #E0FFE0;
+            background-color: #d8f0c8; /* slightly darker light green */
         }
         /* Highlight upcoming season */
         .upcoming td {
-            background-color: #DFF0D8 !important;
+            background-color: #c8e6b8 !important;
         }
 
         /* Links */
         a {
-            color: #006400;
+            color: #004d00;
             font-weight: bold;
         }
         a:hover {
-            color: #228B22;
+            color: #006400;
         }
 
     </style>
