@@ -3,116 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <title>Torey Johnson - Full Time Nerd</title>
-</head>
+    <style>
+        /* Body with gradient + subtle texture */
+        body {
+            background: linear-gradient(135deg, #90EE90, #32CD32);
+            font-family: 'Times New Roman', serif;
+            color: #006400;
+            margin: 0;
+            padding: 0;
+        }
 
-<body style="background-color:#90EE90; color:#006400; font-family:Times New Roman; margin:20px;">
+        /* Main container card */
+        .container {
+            background-color: white;
+            padding: 30px;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 950px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+
+        /* Header */
+        h1 {
+            color: white;
+            background: linear-gradient(to right, #006400, #228B22);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+
+        /* Info paragraphs */
+        .info p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        /* Centered image with shadow + hover effect */
+        .main-image {
+            display: block;
+            margin: 25px auto;
+            border: 5px solid #006400;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+        .main-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Section headers */
+        h2 {
+            background: rgba(200,255,200,0.3);
+            padding: 10px;
+            border-radius: 8px;
+            color: #006400;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #228B22;
+            margin: 15px 0;
+        }
+
+        /* List styling */
+        ul {
+            padding-left: 25px;
+            color: #006400;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #228B22;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        nav a {
+            color: #F0E68C;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+        }
+        table th, table td {
+            border: 2px solid #006400;
+            padding: 12px;
+            text-align: center;
+        }
+        table th {
+            background-color: #228B22;
+            color: #F0E68C;
+        }
+        table tr:nth-child(even) td {
+            background-color: #F0FFF0;
+        }
+        table tr:nth-child(odd) td {
+            background-color: #E0FFE0;
+        }
+        /* Highlight upcoming season */
+        .upcoming td {
+            background-color: #DFF0D8 !important;
+        }
+
+        /* Links */
+        a {
+            color: #006400;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #228B22;
+        }
+
+    </style>
+</head>
+<body>
 
     <!-- Navigation -->
-    <nav style="background-color:#228B22; padding:10px;">
-        <a href="index.html" style="color:#F0E68C; margin-right:10px;">Home</a>
-        <a href="html/project2.html" style="color:#F0E68C;">Interests</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="html/project2.html">Interests</a>
     </nav>
 
-    <!-- Header -->
-    <h1 style="color:#228B22; font-size:40px;">
-        Torey Johnson - Go Pack Go!
-    </h1>
+    <!-- Container -->
+    <div class="container">
 
-    <p>
-        <strong>Favorite Color:</strong> Verdigris <br>
-        Packers fan, computer science student,
-        amateur golfer, professional monkey, culinary art enthusiast
-    </p>
+        <!-- Header -->
+        <h1>Torey Johnson - Go Pack Go!</h1>
 
-    <!-- Image -->
-    <center>
-        <img src="images/Lambeau Field.jpg" alt="Lambeau Field Packers stadium" width="500">
-    </center>
+        <!-- Personal Info -->
+        <div class="info">
+            <p><strong>Favorite Color:</strong> Verdigris</p>
+            <p><strong>Fan Type:</strong> Packers fan</p>
+            <p><strong>Hobbies:</strong> Computer Science, Golf, Rock Climbing, Culinary Arts</p>
+            <p><strong>Other:</strong> Amateur golfer, professional monkey, culinary art enthusiast</p>
+        </div>
 
-    <!-- List -->
-    <h2>Top Interests</h2>
-    <ul>
-        <li>Green Bay Packers</li>
-        <li>Computer Science</li>
-        <li>Golf</li>
-        <li>Rock Climbing</li>
-        <li>Culinary Arts</li>
-    </ul>
+        <!-- Main Image -->
+        <img src="images/Lambeau Field.jpg" alt="Lambeau Field Packers stadium" width="500" class="main-image">
 
-    <!-- Table -->
-    <h2>Packers Playoff Record (2016–2026)</h2>
+        <hr>
 
-    <table border="2" cellpadding="10" cellspacing="0">
-        <tr>
-            <th>Season</th>
-            <th>Opponent</th>
-            <th>Result</th>
-        </tr>
+        <!-- Top Interests -->
+        <h2>Top Interests</h2>
+        <ul>
+            <li>Green Bay Packers</li>
+            <li>Computer Science</li>
+            <li>Golf</li>
+            <li>Rock Climbing</li>
+            <li>Culinary Arts</li>
+        </ul>
 
-        <tr>
-            <td>2016</td>
-            <td>New York Giants</td>
-            <td>Win 38-13</td>
-        </tr>
-        <tr>
-            <td>2016</td>
-            <td>Dallas Cowboys</td>
-            <td>Win 34-31</td>
-        </tr>
-        <tr>
-            <td>2016</td>
-            <td>Atlanta Falcons</td>
-            <td>Loss 44-21</td>
-        </tr>
-        <tr>
-            <td>2019</td>
-            <td>Seattle Seahawks</td>
-            <td>Win 28-23</td>
-        </tr>
-        <tr>
-            <td>2019</td>
-            <td>San Francisco 49ers</td>
-            <td>Loss 37-20</td>
-        </tr>
-        <tr>
-            <td>2020</td>
-            <td>Los Angeles Rams</td>
-            <td>Win 32-18</td>
-        </tr>
-        <tr>
-            <td>2020</td>
-            <td>Tampa Bay Buccaneers</td>
-            <td>Loss 31-26</td>
-        </tr>
-        <tr>
-            <td>2021</td>
-            <td>San Francisco 49ers</td>
-            <td>Loss 13-10</td>
-        </tr>
-        <tr>
-            <td>2023</td>
-            <td>Dallas Cowboys</td>
-            <td>Win 48-32</td>
-        </tr>
-        <tr>
-            <td>2023</td>
-            <td>San Francisco 49ers</td>
-            <td>Loss 24-21</td>
-        </tr>
-        <tr>
-            <td>2024–2026</td>
-            <td>TBD</td>
-            <td>Future Seasons</td>
-        </tr>
-    </table>
+        <hr>
 
-    <!-- Link -->
-    <p>
-        Visit the 
-        <a href="https://www.packers.com" target="_blank">
-            Official Packers Website
-        </a>
-    </p>
+        <!-- Packers Playoff Record -->
+        <h2>Packers Playoff Record (2016–2027)</h2>
+
+        <table>
+            <!-- Header -->
+            <tr>
+                <th>Season</th>
+                <th>Opponent</th>
+                <th>Result</th>
+            </tr>
+
+            <!-- 2016 -->
+            <tr>
+                <td>2016</td>
+                <td>New York Giants</td>
+                <td><strong>Win 38-13</strong></td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>Dallas Cowboys</td>
+                <td><strong>Win 34-31</strong></td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>Atlanta Falcons</td>
+                <td><strong>Loss 44-21</strong></td>
+            </tr>
+
+            <!-- 2019 -->
+            <tr>
+                <td>2019</td>
+                <td>Seattle Seahawks</td>
+                <td><strong>Win 28-23</strong></td>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>San Francisco 49ers</td>
+                <td><strong>Loss 37-20</strong></td>
+            </tr>
+
+            <!-- 2020 -->
+            <tr>
+                <td>2020</td>
+                <td>Los Angeles Rams</td>
+                <td><strong>Win 32-18</strong></td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>Tampa Bay Buccaneers</td>
+                <td><strong>Loss 31-26</strong></td>
+            </tr>
+
+            <!-- 2021 -->
+            <tr>
+                <td>2021</td>
+                <td>San Francisco 49ers</td>
+                <td><strong>Loss 13-10</strong></td>
+            </tr>
+
+            <!-- 2023 -->
+            <tr>
+                <td>2023</td>
+                <td>Dallas Cowboys</td>
+                <td><strong>Win 48-32</strong></td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>San Francisco 49ers</td>
+                <td><strong>Loss 24-21</strong></td>
+            </tr>
+
+            <!-- 2024-2025 -->
+            <tr>
+                <td>2024-2025</td>
+                <td>Philadelphia Eagles</td>
+                <td><strong>Loss 22-10<br>(NFC Wild Card)</strong></td>
+            </tr>
+
+            <!-- 2025-2026 -->
+            <tr>
+                <td>2025-2026</td>
+                <td>Chicago Bears</td>
+                <td><strong>Loss 31-27<br>(NFC Wild Card)</strong></td>
+            </tr>
+
+            <!-- 2026-2027 Upcoming -->
+            <tr class="upcoming">
+                <td>2026-2027</td>
+                <td>TBD</td>
+                <td><strong>Upcoming Season</strong></td>
+            </tr>
+
+        </table>
+
+        <p>Visit the <a href="https://www.packers.com" target="_blank">Official Packers Website</a></p>
+
+    </div>
 
 </body>
 </html>
