@@ -14,11 +14,12 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-position: center;
     }
 
     .container {
         background-color: rgba(255, 255, 255, 0.95);
-        padding: 30px;
+        padding: 30px 100px; /* extra side padding for images */
         margin: 30px auto;
         border-radius: 15px;
         max-width: 900px;
@@ -54,54 +55,37 @@
         min-height: 420px;
     }
 
-    /* Spiral border effect */
+    /* IMAGE STYLING */
     .magazine img {
         width: 260px;
         height: auto;
         border-radius: 20px;
-        padding: 12px;
         position: absolute;
+        top: 40px;
         z-index: 2;
-
-        background: conic-gradient(
-            #006400,
-            #c9a227,
-            #006400,
-            #c9a227,
-            #006400
-        );
-
         box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         transition: transform 0.3s ease;
-
-        /* keeps swirl as border only */
-        -webkit-mask:
-            linear-gradient(#000 0 0) content-box,
-            linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
     }
 
-    /* Position images */
+    /* LEFT IMAGE */
     .magazine img.left {
-        left: -60px;
-        top: 40px;
+        left: -180px;
         transform: rotate(-5deg);
     }
 
+    /* RIGHT IMAGE */
     .magazine img.right {
-        right: -60px;
-        top: 60px;
+        right: -180px;
         transform: rotate(5deg);
     }
 
-    /* Hover effect */
+    /* HOVER EFFECT */
     .magazine img:hover {
         transform: scale(1.08) rotate(0deg);
     }
 
     .magazine .text {
-        margin-top: 200px;
+        margin-top: 220px;
         font-size: 18px;
         line-height: 1.7;
         background-color: #FFF8DC;
@@ -111,11 +95,7 @@
         z-index: 1;
     }
 
-    .magazine:first-of-type .text {
-        margin-top: 170px;
-    }
-
-    /* Mobile layout */
+    /* MOBILE VIEW */
     @media (max-width: 1000px) {
         .magazine img.left,
         .magazine img.right {
@@ -126,6 +106,10 @@
             display: block;
             margin: 0 auto 15px;
             transform: none;
+        }
+
+        .container {
+            padding: 20px;
         }
 
         .magazine .text {
@@ -141,7 +125,6 @@
     <h1>About Me and My Interests</h1>
 
     <div class="magazine">
-        <!-- FIXED PATHS HERE -->
         <img src="images/Pearls.jpg" alt="Pearls" class="left">
         <img src="images/vince.jpg" alt="Vince" class="right">
 
@@ -151,7 +134,6 @@
     </div>
 
     <div class="magazine">
-        <!-- FIXED PATH HERE -->
         <img src="images/climbing.jpg" alt="Climbing" class="left">
 
         <div class="text">
