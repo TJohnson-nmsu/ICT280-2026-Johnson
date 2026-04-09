@@ -1,135 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Torey Johnson - Project 2: Interests</title>
-    <style>
-        body {
-            background-color: #004d00;
-            font-family: 'Times New Roman', serif;
-            margin: 0;
-            padding: 20px;
-            background-image: url('images/football-texture.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+<meta charset="UTF-8">
+<title>Torey Johnson - Project 2: Interests</title>
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            margin: 30px auto;
-            border-radius: 15px;
-            max-width: 900px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            color: #006400;
-            position: relative;
-            overflow: visible;
-        }
+<style>
+    body {
+        background-color: #004d00;
+        font-family: 'Times New Roman', serif;
+        margin: 0;
+        padding: 20px;
+        background-image: url('images/football-texture.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 
-        h1 {
-            text-align: center;
-            color: #006400;
-            margin-bottom: 25px;
-        }
+    .container {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        margin: 30px auto;
+        border-radius: 15px;
+        max-width: 900px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        color: #006400;
+        position: relative;
+    }
 
-        p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            background-color: #FFF8DC;
-            padding: 15px;
-            border-radius: 10px;
-        }
+    h1 {
+        text-align: center;
+        color: #006400;
+        margin-bottom: 25px;
+    }
 
-        hr {
-            border: 0;
-            border-top: 2px solid #006400;
-            margin: 20px 0;
-        }
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        background-color: #FFF8DC;
+        padding: 15px;
+        border-radius: 10px;
+    }
 
-        .magazine {
-            position: relative;
-            margin-bottom: 80px;
-            min-height: 430px;
-            overflow: visible;
-        }
+    hr {
+        border: 0;
+        border-top: 2px solid #006400;
+        margin: 20px 0;
+    }
 
-        .magazine img {
-            width: 260px;
-            max-width: 260px;
-            height: auto;
-            border: 5px solid #006400;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-            position: absolute;
-            transition: transform 0.3s;
-            background: white;
-        }
+    .magazine {
+        position: relative;
+        margin-bottom: 80px;
+        min-height: 420px;
+    }
 
-        .magazine img.left {
-            left: -210px;
-            top: 10px;
-            z-index: 2;
-            transform: rotate(-3deg);
-        }
+    /* Spiral border effect */
+    .magazine img {
+        width: 260px;
+        height: auto;
+        border-radius: 20px;
+        padding: 12px;
+        position: absolute;
+        z-index: 2;
 
+        background: conic-gradient(
+            #006400,
+            #c9a227,
+            #006400,
+            #c9a227,
+            #006400
+        );
+
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease;
+
+        /* keeps swirl as border only */
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    /*Position images */
+    .magazine img.left {
+        left: -60px;
+        top: 40px;
+        transform: rotate(-5deg);
+    }
+
+    .magazine img.right {
+        right: -60px;
+        top: 60px;
+        transform: rotate(5deg);
+    }
+
+    /* ✨ hover effect */
+    .magazine img:hover {
+        transform: scale(1.08) rotate(0deg);
+    }
+
+    .magazine .text {
+        margin-top: 200px;
+        font-size: 18px;
+        line-height: 1.7;
+        background-color: #FFF8DC;
+        padding: 15px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .magazine:first-of-type .text {
+        margin-top: 170px;
+    }
+
+    /* mobile layout */
+    @media (max-width: 1000px) {
+        .magazine img.left,
         .magazine img.right {
-            right: -210px;
-            top: 20px;
-            z-index: 1;
-            transform: rotate(3deg);
+            position: relative;
+            left: auto;
+            right: auto;
+            top: auto;
+            display: block;
+            margin: 0 auto 15px;
+            transform: none;
         }
 
         .magazine .text {
-            position: relative;
-            margin-top: 220px;
-            font-size: 18px;
-            line-height: 1.7;
-            background-color: #FFF8DC;
-            padding: 15px;
-            border-radius: 10px;
-            clear: both;
-            z-index: 0;
+            margin-top: 0;
         }
-
-        .magazine:first-of-type .text {
-            margin-top: 160px;
-        }
-
-        @media (max-width: 1100px) {
-            .magazine img.left {
-                left: -150px;
-            }
-
-            .magazine img.right {
-                right: -150px;
-            }
-        }
-
-        @media (max-width: 1000px) {
-            .magazine {
-                min-height: 0;
-            }
-
-            .magazine img.left,
-            .magazine img.right {
-                position: relative;
-                left: auto;
-                right: auto;
-                top: auto;
-                display: block;
-                margin: 0 auto 15px;
-                transform: none;
-            }
-
-            .magazine .text,
-            .magazine:first-of-type .text {
-                margin-top: 0;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
 
 <div class="container">
