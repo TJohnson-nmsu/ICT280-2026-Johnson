@@ -23,6 +23,8 @@
             max-width: 900px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.4);
             color: #006400;
+            position: relative;
+            overflow: visible;
         }
 
         h1 {
@@ -49,48 +51,60 @@
         .magazine {
             position: relative;
             margin-bottom: 80px;
-            min-height: 420px;
+            min-height: 430px;
             overflow: visible;
         }
 
         .magazine img {
-            width: 32%;
-            max-width: 280px;
+            width: 260px;
+            max-width: 260px;
             height: auto;
             border: 5px solid #006400;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             position: absolute;
             transition: transform 0.3s;
+            background: white;
         }
 
         .magazine img.left {
-            left: -180px;
-            top: 0;
+            left: -210px;
+            top: 10px;
             z-index: 2;
             transform: rotate(-3deg);
         }
 
         .magazine img.right {
-            right: -180px;
-            top: 30px;
+            right: -210px;
+            top: 20px;
             z-index: 1;
             transform: rotate(3deg);
         }
 
         .magazine .text {
             position: relative;
-            margin-top: 240px;
+            margin-top: 220px;
             font-size: 18px;
             line-height: 1.7;
             background-color: #FFF8DC;
             padding: 15px;
             border-radius: 10px;
             clear: both;
+            z-index: 0;
         }
 
         .magazine:first-of-type .text {
-            margin-top: 190px;
+            margin-top: 160px;
+        }
+
+        @media (max-width: 1100px) {
+            .magazine img.left {
+                left: -150px;
+            }
+
+            .magazine img.right {
+                right: -150px;
+            }
         }
 
         @media (max-width: 1000px) {
