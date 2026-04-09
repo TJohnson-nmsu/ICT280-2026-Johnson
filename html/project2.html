@@ -22,7 +22,7 @@
             border-radius: 15px;
             max-width: 900px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            color: #006400; /* dark green text */
+            color: #006400;
         }
 
         h1 {
@@ -35,7 +35,7 @@
             font-size: 18px;
             line-height: 1.7;
             margin-bottom: 20px;
-            background-color: #FFF8DC; /* light gold behind text */
+            background-color: #FFF8DC;
             padding: 15px;
             border-radius: 10px;
         }
@@ -48,12 +48,14 @@
 
         .magazine {
             position: relative;
-            margin-bottom: 50px;
-            height: 350px; /* ensures space for tilted images */
+            margin-bottom: 80px;
+            min-height: 500px;
         }
 
         .magazine img {
-            width: 48%;
+            width: 32%;
+            max-width: 280px;
+            height: auto;
             border: 5px solid #006400;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
@@ -61,7 +63,6 @@
             transition: transform 0.3s;
         }
 
-        /* Tilt & overlap */
         .magazine img.left {
             left: 0;
             top: 0;
@@ -78,14 +79,13 @@
 
         .magazine .text {
             position: relative;
-            margin-top: 250px;
+            margin-top: 380px;
             font-size: 18px;
             line-height: 1.7;
-            background-color: #FFF8DC; /* light gold background for text */
+            background-color: #FFF8DC;
             padding: 15px;
             border-radius: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -94,7 +94,6 @@
     <h1>About Me and My Interests</h1>
 
     <div class="magazine">
-        <!-- FIXED PATHS -->
         <img src="../images/Pearls.jpg" alt="Pearls" class="left">
         <img src="../images/vince.jpg" alt="Vince" class="right">
         <div class="text">
@@ -103,7 +102,6 @@
     </div>
 
     <div class="magazine">
-                <!-- FIXED PATH -->
         <img src="../images/climbing.jpg" alt="Climbing" class="left">
         <div class="text">
             I am really into coding and cooking, and they actually feel pretty similar to me. Coding challenges me to think creatively and solve problems, while cooking lets me experiment, build something tangible, and be patient. Both keep me focused and engaged, and they give me a real sense of accomplishment when something works out just right. I enjoy exploring both, learning new techniques, and seeing what I can create. Staying active is important to me as well. Golf and rock climbing are my favorite activities because they push me to focus, plan, and improve steadily. Climbing, in particular, challenges me mentally and physically, and I love the feeling of reaching the top. These activities balance my life and give me a way to step back, reset, and enjoy the process.
@@ -112,10 +110,7 @@
 
     <hr>
 
-    <p>
-Now you know who I am. We can be friends!
-    </p>
-
+    <p>Now you know who I am. We can be friends!</p>
 </div>
 
 </body>
